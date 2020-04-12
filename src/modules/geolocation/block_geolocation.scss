@@ -1,0 +1,143 @@
+.block-geodata {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  .block-weather {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 350px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(39, 36, 36, 0.377);
+    &_title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8em;
+      letter-spacing: 0.02em;
+      line-height: 40px;
+      text-transform: uppercase;
+    }
+    &_date {
+      font-size: 1.1em;
+      margin-top: 1vh;
+      margin-bottom: 0;
+      letter-spacing: 0.06em;
+    }
+    &_icon-temp {
+      height: 100px;
+      width: 70%;
+      margin: 0;
+      padding: 0;
+    }
+    .current-weather {
+      display: flex;
+      border-bottom: 2px solid red;
+      &_temp {
+        display: flex;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 7em;
+        line-height: 120%;
+        position: relative;
+        .degrees {
+          font-family: 'Montserrat', sans-serif;
+          line-height: 100%;
+          padding: 0;
+          margin: 0 0 0 5px;
+          font-size: 0.4em;
+        }
+      }
+      &_info {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: 0.7em;
+        padding: 0 0 12px 0;
+        margin: 0 0 0 30px;
+        line-height: 1.7em;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .three-days-weather {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3vh;
+      &_day {
+        text-transform: uppercase;
+        font-size: 0.7em;
+        letter-spacing: 0.12em;
+      }
+      &_info {
+        display: flex;
+        margin: 0;
+        font-size: 2em;
+        .second-icon,
+        .third-icon,
+        .fourth-icon {
+          color: transparent;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .block-geolocation {
+    display: flex;
+    flex-direction: column;
+    &_map {
+      width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      @media screen and (max-width: 800px) {
+        flex-grow: 1;
+      }
+    }
+    &_coordinates {
+      width: 40%;
+      height: 50px;
+      margin-top: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      color: white;
+      font-weight: bold;
+      text-align: left;
+      line-height: 25px;
+      letter-spacing: 0.09em;
+      background-color: rgba(39, 36, 36, 0.377);
+      border-radius: 15px;
+      padding: 5px 10px;
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .block-weather {
+    margin: 0 auto;
+  }
+  .block-geolocation {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}

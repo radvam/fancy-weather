@@ -1,0 +1,180 @@
+.block-geodata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.block-geodata .block-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: white;
+  width: 350px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(39, 36, 36, 0.377);
+}
+
+.block-geodata .block-weather_title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 0.02em;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.block-geodata .block-weather_date {
+  font-size: 1.1em;
+  margin-top: 1vh;
+  margin-bottom: 0;
+  letter-spacing: 0.06em;
+}
+
+.block-geodata .block-weather_icon-temp {
+  height: 100px;
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.block-geodata .block-weather .current-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid red;
+}
+
+.block-geodata .block-weather .current-weather_temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9em;
+  line-height: 100%;
+  position: relative;
+}
+
+.block-geodata .block-weather .current-weather_temp .degrees {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 110%;
+  padding: 0;
+  margin: 0 0 0 5px;
+  font-size: 0.4em;
+}
+
+.block-geodata .block-weather .current-weather_info {
+  font-family: 'Montserrat', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 0.75em;
+  padding: 0 0 12px 0;
+  margin: 0 0 0 40px;
+  line-height: 1.7em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.block-geodata .block-weather .three-days-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.block-geodata .block-weather .three-days-weather_day {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.12em;
+}
+
+.block-geodata .block-weather .three-days-weather_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  font-size: 2em;
+}
+
+.block-geodata .block-weather .three-days-weather_info .second-icon,
+.block-geodata .block-weather .three-days-weather_info .third-icon,
+.block-geodata .block-weather .three-days-weather_info .fourth-icon {
+  color: transparent;
+  width: 50px;
+  height: 50px;
+}
+
+.block-geodata .block-geolocation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-geodata .block-geolocation_map {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .block-geodata .block-geolocation_map {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.block-geodata .block-geolocation_coordinates {
+  width: 45%;
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  line-height: 25px;
+  letter-spacing: 0.09em;
+  background-color: rgba(39, 36, 36, 0.377);
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .block-weather {
+    margin: 0 auto;
+  }
+  .block-geolocation {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+/*# sourceMappingURL=block_geolocation.css.map */
