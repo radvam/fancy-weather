@@ -1,0 +1,204 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header .control-panel {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 23%;
+  min-width: 240px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .button-change-background {
+    width: 44px;
+    height: 44px;
+    background: url('./assets/image/RefreshBG.svg') 100% 100% no-repeat no-repeat;
+    background-color: rgb(201, 20, 20);
+    border-radius: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(67, 154, 189, 0.801);
+    }
+  }
+
+  .change-language {
+    width: 71px;
+    height: 44px;
+    cursor: pointer;
+
+    select {
+      width: 100%;
+      height: 100%;
+      background: rgb(174, 181, 185);
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(67, 154, 189, 0.801);
+      }
+    }
+  }
+
+  .buttons-change-temperature-units {
+    display: flex;
+
+    .button-imperial,
+    .button-metric {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 44px;
+      width: 48px;
+      background: rgba(76, 82, 85, 0.4);
+
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #ffffff;
+      cursor: pointer;
+
+      &.active {
+        background: rgb(194, 20, 20);
+      }
+      &:hover {
+        background-color: rgba(67, 154, 189, 0.801);
+      }
+    }
+    .button-imperial {
+      border-radius: 5px 0 0 5px;
+    }
+    .button-metric {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+header form.form-search {
+  width: 390px;
+  height: 44px;
+  display: flex;
+  flex-grow: 0;
+  padding: 0;
+  @media screen and (max-width: 800px) {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  input[type='search'] {
+    padding-left: 4%;
+    padding-right: 4%;
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    background: rgba(140, 143, 145, 0.5);
+    border: 1px solid rgba(228, 227, 227, 0.2);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(47, 149, 189, 0.39);
+    }
+  }
+
+  input[type='submit'] {
+    position: relative;
+    right: 1px;
+    height: 98%;
+    width: 75px;
+    background: rgba(17, 16, 16, 0.884);
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    &:hover {
+      background-color: rgba(67, 154, 189, 0.801);
+    }
+  }
+
+  .voice-search {
+    height: 44px;
+    width: 45px;
+    background: url('./assets/image/speak.svg') center center no-repeat no-repeat;
+    background-size: contain;
+    background-color: rgba(163, 44, 44, 0.425);
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(67, 154, 189, 0.801);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .voice-search__animation {
+    animation: voice 6s ease-in-out;
+    @keyframes voice {
+      0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(20deg);
+      }
+      20% {
+        transform: rotate(-20deg);
+      }
+      30% {
+        transform: rotate(20deg);
+      }
+      40% {
+        transform: rotate(-20deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
+      60% {
+        transform: rotate(-20deg);
+      }
+      70% {
+        transform: rotate(20deg);
+      }
+      80% {
+        transform: rotate(-20deg);
+      }
+      90% {
+        transform: rotate(20deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
