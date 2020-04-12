@@ -1,0 +1,9 @@
+import './modules/data/data.js';
+import './modules/structure/structure.js';
+import './modules/geolocation/currentLocation.js';
+import './modules/geolocation/map.js';
+import './modules/geolocation/geocoding.js';
+import './modules/block_weather/weather.js';
+import './modules/block_control/control.js';
+import './modules/background/background.js';
+import './modules/block_weather/date.js';

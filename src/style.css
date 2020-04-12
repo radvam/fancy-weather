@@ -1,0 +1,253 @@
+body {
+  background-color: grey;
+}
+
+.block-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 6vh;
+}
+
+.block-control_left {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.block-control_left .control-item {
+  margin-right: 1vw;
+}
+
+.block-control_right .input-voice {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 25px;
+  background: url(./assets/image/Vector.svg) 100% 100% no-repeat no-repeat;
+  background-color: black;
+  background-size: contain;
+}
+
+.block-control_background-change {
+  height: 40px;
+  width: 40px;
+  background: url(./assets/image/RefreshBG.svg) center center no-repeat;
+  background-size: 100%;
+  border-radius: 6px;
+  background-color: #c91414;
+}
+
+.block-control_background-change:hover {
+  cursor: pointer;
+}
+
+.block-control_language-select {
+  background-color: rgba(183, 196, 206, 0.842);
+  height: 40px;
+  border-radius: 6px;
+  width: 60px;
+}
+
+.block-control_language-select:hover {
+  cursor: pointer;
+}
+
+.block-control_input-text {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  width: 250px;
+  height: 28px;
+  padding: 4px;
+}
+
+.block-control_search {
+  background-color: rgba(183, 196, 206, 0.842);
+  height: 40px;
+  width: 70px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.block-control_search:hover {
+  cursor: pointer;
+}
+
+.block-geodata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8vh;
+}
+
+.block-geodata .block-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: white;
+  width: 350px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(39, 36, 36, 0.377);
+}
+
+.block-geodata .block-weather_title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8em;
+  letter-spacing: 0.02em;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.block-geodata .block-weather_date {
+  font-size: 1.1em;
+  margin-top: 1vh;
+  margin-bottom: 0;
+  letter-spacing: 0.06em;
+}
+
+.block-geodata .block-weather_icon-temp {
+  height: 100px;
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.block-geodata .block-weather .current-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid red;
+}
+
+.block-geodata .block-weather .current-weather_temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9em;
+  line-height: 100%;
+  position: relative;
+}
+
+.block-geodata .block-weather .current-weather_temp .degrees {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 110%;
+  padding: 0;
+  margin: 0 0 0 5px;
+  font-size: 0.4em;
+}
+
+.block-geodata .block-weather .current-weather_info {
+  font-family: 'Montserrat', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 0.75em;
+  padding: 0 0 12px 0;
+  margin: 0 0 0 40px;
+  line-height: 1.7em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.block-geodata .block-weather .three-days-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3vh;
+}
+
+.block-geodata .block-weather .three-days-weather_day {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.12em;
+}
+
+.block-geodata .block-weather .three-days-weather_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  font-size: 2em;
+}
+
+.block-geodata .block-weather .three-days-weather_info .second-icon,
+.block-geodata .block-weather .three-days-weather_info .third-icon,
+.block-geodata .block-weather .three-days-weather_info .fourth-icon {
+  color: transparent;
+  width: 50px;
+  height: 50px;
+}
+
+.block-geodata .block-geolocation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-geodata .block-geolocation_map {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+
+.block-geodata .block-geolocation_coordinates {
+  width: 45%;
+  margin-top: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1vw;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  line-height: 2vw;
+  letter-spacing: 0.04em;
+  background-color: rgba(39, 36, 36, 0.377);
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* Full height */
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

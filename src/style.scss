@@ -1,0 +1,13 @@
+@import './modules/background/background.scss';
+@import './modules/block_control/block_control.scss';
+@import './modules/geolocation/block_geolocation.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
