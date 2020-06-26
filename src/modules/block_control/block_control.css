@@ -1,76 +1,312 @@
-.block-control {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 6vh;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.block-control_left {
-  border-radius: 5px;
+header .control-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 23%;
+  min-width: 240px;
 }
 
-.block-control_left .control-item {
-  margin-right: 1vw;
+@media screen and (max-width: 800px) {
+  header .control-panel {
+    width: 100%;
+  }
 }
 
-.block-control_right .input-voice {
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: 25px;
-  background: url(./assets/image/Vector.svg) 100% 100% no-repeat no-repeat;
-  background-size: contain;
+header .control-panel .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.block-control_background-change {
-  height: 40px;
-  width: 40px;
-  background: url(./assets/image/RefreshBG.svg) center center no-repeat;
-  background-size: 100%;
-  border-radius: 6px;
+header .control-panel .button-change-background {
+  width: 44px;
+  height: 44px;
+  background: url("./assets/image/RefreshBG.svg") 100% 100% no-repeat no-repeat;
   background-color: #c91414;
-}
-
-.block-control_background-change:hover {
+  border-radius: 7px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.block-control_language-select {
-  background-color: rgba(183, 196, 206, 0.842);
-  height: 40px;
-  border-radius: 6px;
-  width: 60px;
+header .control-panel .button-change-background:hover {
+  background-color: rgba(67, 154, 189, 0.801);
 }
 
-.block-control_language-select:hover {
+header .control-panel .change-language {
+  width: 71px;
+  height: 44px;
   cursor: pointer;
 }
 
-.block-control_input-text {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  width: 250px;
-  height: 28px;
-  padding: 4px;
-}
-
-.block-control_search {
-  background-color: rgba(183, 196, 206, 0.842);
-  height: 40px;
-  width: 70px;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.block-control_search:hover {
+header .control-panel .change-language select {
+  width: 100%;
+  height: 100%;
+  background: #aeb5b9;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+header .control-panel .change-language select:hover {
+  background-color: rgba(67, 154, 189, 0.801);
+}
+
+header .control-panel .buttons-change-temperature-units {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .control-panel .buttons-change-temperature-units .button-imperial,
+header .control-panel .buttons-change-temperature-units .button-metric {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 44px;
+  width: 48px;
+  background: rgba(76, 82, 85, 0.4);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+header .control-panel .buttons-change-temperature-units .button-imperial.active,
+header .control-panel .buttons-change-temperature-units .button-metric.active {
+  background: #c21414;
+}
+
+header .control-panel .buttons-change-temperature-units .button-imperial:hover,
+header .control-panel .buttons-change-temperature-units .button-metric:hover {
+  background-color: rgba(67, 154, 189, 0.801);
+}
+
+header .control-panel .buttons-change-temperature-units .button-imperial {
+  border-radius: 5px 0 0 5px;
+}
+
+header .control-panel .buttons-change-temperature-units .button-metric {
+  border-radius: 0 5px 5px 0;
+}
+
+header form.form-search {
+  width: 390px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+  header form.form-search {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+header form.form-search input[type='search'] {
+  padding-left: 4%;
+  padding-right: 4%;
+  height: 100%;
+  width: 100%;
+  min-width: 200px;
+  background: rgba(140, 143, 145, 0.5);
+  border: 1px solid rgba(228, 227, 227, 0.2);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+}
+
+header form.form-search input[type='search']:hover {
+  background-color: rgba(47, 149, 189, 0.39);
+}
+
+header form.form-search input[type='submit'] {
+  position: relative;
+  right: 1px;
+  height: 98%;
+  width: 75px;
+  background: rgba(17, 16, 16, 0.884);
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0;
+}
+
+header form.form-search input[type='submit']:hover {
+  background-color: rgba(67, 154, 189, 0.801);
+}
+
+header form.form-search .voice-search {
+  height: 44px;
+  width: 45px;
+  background: url("./assets/image/speak.svg") center center no-repeat no-repeat;
+  background-size: contain;
+  background-color: #c91414;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+header form.form-search .voice-search:hover {
+  cursor: pointer;
+  background-color: rgba(67, 154, 189, 0.801);
+}
+
+header form.form-search .voice-search:focus {
+  outline: none;
+}
+
+header form.form-search .voice-search__animation {
+  -webkit-animation: voice 6s ease-in-out;
+          animation: voice 6s ease-in-out;
+}
+
+@-webkit-keyframes voice {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  60% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  70% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  80% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  90% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes voice {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  20% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  30% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  60% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  70% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  80% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  90% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 /*# sourceMappingURL=block_control.css.map */
